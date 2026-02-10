@@ -1,0 +1,18 @@
+{
+  "frontend/src/App.tsx": "Main application component managing screen state flow (welcome → quiz → results → celebration) with smooth transitions and no authentication required.",
+  "frontend/src/main.tsx": "Application entry point with QueryClient provider, removed InternetIdentityProvider as no authentication is needed.",
+  "frontend/src/screens/WelcomeScreen.tsx": "Landing screen with romantic title, subtitle, and start button with copy link functionality.",
+  "frontend/src/screens/QuizScreen.tsx": "One-question-at-a-time quiz interface with progress bar, animated options, celebration on correct answers, and special sparkle effect for Q4 \"Everything\" option.",
+  "frontend/src/screens/PerfectResultScreen.tsx": "Perfect score (5/5) result screen displaying winning message, couple meme image, date coupon section, and redeemable date button.",
+  "frontend/src/screens/NonPerfectResultScreen.tsx": "Non-perfect score result screen with teasing meme, Valentine prompt, and interactive Yes/No buttons that grow/shrink on repeated No clicks.",
+  "frontend/src/screens/FinalCelebrationScreen.tsx": "Final celebration screen shown after accepting Valentine with hearts, sparkles, and confetti animation.",
+  "frontend/src/components/FloatingHeartsBackground.tsx": "Subtle floating hearts background animation that appears across all screens without interfering with readability.",
+  "frontend/src/components/CelebrationOverlay.tsx": "Heart confetti particle animation overlay triggered on correct quiz answers and final celebration.",
+  "frontend/src/components/SparkleBurst.tsx": "Special sparkle burst animation component triggered when selecting \"Everything\" on Q4.",
+  "frontend/src/components/CopyLinkButton.tsx": "Share button that copies current URL to clipboard with toast confirmation feedback.",
+  "frontend/src/components/AudioControls.tsx": "Audio mute/unmute toggle control positioned in top-left corner.",
+  "frontend/src/hooks/useAudio.ts": "Custom hook managing Web Audio API for optional subtle sound effects with mute state.",
+  "frontend/src/data/quizContent.ts": "Quiz questions data with Q1 updated to have anniversary date options from 2021 and correct answer set to '25th Nov 2021'.",
+  "frontend/src/index.css": "Global styles with romantic Valentine color palette (pinks, blush, beige), custom animations (floating hearts, confetti, sparkles), and OKLCH color system.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with romantic color tokens and custom design system for Valentine aesthetic."
+}

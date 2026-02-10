@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Interactive romantic Valentine-themed web experience: a 5-question MCQ love quiz with pastel romantic UI, animations, and playful Valentine \"Yes/No\" trick, ending with results screens and a redeemable date coupon.",
+  "architectural_notes": [
+    "Mobile-first responsive single-page web experience with simple client-side state management (welcome → quiz → results → Valentine trick).",
+    "No login; app should be lightweight/fast and easily shareable (static deployment friendly)."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-build-a-single-page-mobile-first-romantic-interactive-web-experience-with-a-5-question-multiple-choice-love-quiz-using-a-soft-pastel-valentine-aesthetic-pinks-blush-beige-subtle-gradients-rounded-cards-hearts-cute-emoji-accents-smooth-transitions-and-playful-micro-interactions-all-user-facing-text-must-be-in-english-and-match-the-provided-copy-exactly",
+      "title": "Build a single-page, mobile-first romantic interactive web experience with a 5-question multiple-choice love quiz, using a soft pastel Valentine aesthetic (pinks, blush, beige, subtle gradients), rounded cards, hearts, cute emoji accents, smooth transitions, and playful micro-interactions. All user-facing text must be in English and match the provided copy exactly.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-welcome-screen-with-the-following-elements-and-interactions-title-how-well-do-you-know-your-boy-subtitle-a-tiny-test-made-with-love-just-for-you-and-a-prominent-primary-button-labeled-start-the-love-test-that-transitions-into-the-quiz-flow-with-a-smooth-animation",
+      "title": "Implement the Welcome Screen with the following elements and interactions: Title “How Well Do You Know Your Boy? 💖”, subtitle “A tiny test made with love just for you”, and a prominent primary button labeled “Start the Love Test →” that transitions into the quiz flow with a smooth animation.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-5-question-mcq-quiz-flow-showing-one-question-at-a-time-in-a-cute-card-ui-with-a-progress-indicator-showing-current-question-out-of-5-e-g-1-5-b-selectable-options-with-fun-hover-press-animations-and-c-immediate-feedback-with-a-heart-confetti-animation-when-the-selected-answer-is-correct-use-the-exact-questions-options-and-correct-answers-provided",
+      "title": "Implement the 5-question MCQ quiz flow showing one question at a time in a cute card UI with: (a) progress indicator showing current question out of 5 (e.g., 1/5), (b) selectable options with fun hover/press animations, and (c) immediate feedback with a heart/confetti animation when the selected answer is correct. Use the exact questions, options, and correct answers provided.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-special-sparkle-animation-when-the-user-selects-everything-for-q4-what-do-you-like-about-me-the-most-this-sparkle-effect-must-be-distinct-from-the-standard-correct-answer-heart-confetti-effect",
+      "title": "Add a special sparkle animation when the user selects “Everything” for Q4 (“What do you like about me the most?”). This sparkle effect must be distinct from the standard correct-answer heart/confetti effect.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-scoring-and-result-logic-compute-total-correct-answers-out-of-5-and-route-to-different-result-screens-based-on-score-perfect-5-5-vs-less-than-5-no-login-is-required",
+      "title": "Implement scoring and result logic: compute total correct answers out of 5 and route to different result screens based on score (perfect 5/5 vs less than 5). No login is required.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-perfect-score-5-5-winning-result-screen-with-the-exact-copy-omg-5-5-n-nyou-are-officially-the-best-girlfreind-in-the-world-display-a-cute-romantic-couple-cartoon-couple-meme-image-show-a-date-coupon-section-with-you-have-won-a-date-coupon-nredeemable-for-one-full-day-of-love-food-cuddles-surprises-include-a-button-redeem-my-date-that-when-clicked-shows-your-boy-will-contact-you-shortly-for-booking",
+      "title": "Create the Perfect Score (5/5) winning result screen with the exact copy: “OMG 5/5!!! 😭💖\\n\\nYou are officially the BEST GIRLFREIND IN THE WORLD.” Display a cute romantic couple/cartoon couple meme image. Show a “DATE COUPON” section with: “🎟 You have won a DATE COUPON!\\nRedeemable for: One full day of love, food, cuddles & surprises.” Include a button “Redeem My Date 💌” that, when clicked, shows: “Your boy will contact you shortly for booking 😉”.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-non-perfect-5-result-screen-with-a-cute-funny-not-mean-teasing-meme-image-and-the-exact-copy-hmm-not-perfect-n-nyou-need-to-do-better-but-i-still-love-you-then-show-will-you-still-be-my-valentine-with-two-buttons-yes-and-no",
+      "title": "Create the Non-Perfect (<5) result screen with a cute/funny (not mean) teasing meme image and the exact copy: “Hmm… not perfect 👀\\n\\nYou need to do better… but I still love you.” Then show: “Will you still be my Valentine? 💘” with two buttons: “Yes 💖” and “No 😈”.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-valentine-trick-interaction-on-the-non-perfect-result-path-when-the-user-clicks-no-progressively-enlarge-the-yes-button-and-shrink-the-no-button-while-changing-the-prompt-text-in-sequence-first-to-are-you-sure-then-to-you-have-no-escape-and-continue-the-shrink-grow-behavior-on-subsequent-no-clicks-until-yes-fills-most-of-the-screen-and-no-becomes-almost-impossible-to-click-when-the-user-clicks-yes-show-the-final-celebration-screen-yay-you-are-my-valentine-forever-with-confetti-hearts-romantic-animation",
+      "title": "Implement the Valentine Trick interaction on the non-perfect result path: when the user clicks “No 😈”, progressively enlarge the “Yes 💖” button and shrink the “No 😈” button, while changing the prompt text in sequence: first to “Are you sure?? 🥺”, then to “You have no escape 😌”, and continue the shrink/grow behavior on subsequent “No” clicks until “Yes” fills most of the screen and “No” becomes almost impossible to click. When the user clicks “Yes 💖”, show the final celebration screen: “YAY!!! You are my Valentine forever 💖🌹” with confetti + hearts + romantic animation.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-floating-hearts-background-effect-across-the-experience-welcome-quiz-and-result-screens-that-is-subtle-performant-and-does-not-reduce-readability-include-gentle-animated-transitions-between-major-screens-welcome-quiz-results",
+      "title": "Add a floating hearts background effect across the experience (welcome, quiz, and result screens) that is subtle, performant, and does not reduce readability. Include gentle animated transitions between major screens (welcome → quiz → results).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-optional-audio-provide-gentle-background-music-and-subtle-sound-effects-for-key-interactions-start-selecting-an-option-correct-answer-celebration-final-celebration-audio-must-be-off-by-default-or-require-an-explicit-user-action-to-start-and-provide-simple-controls-mute-unmute-or-play-pause",
+      "title": "Optional audio: provide gentle background music and subtle sound effects for key interactions (start, selecting an option, correct answer celebration, final celebration). Audio must be off by default or require an explicit user action to start, and provide simple controls (mute/unmute or play/pause).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-provide-a-shareable-link-experience-with-no-login-required-include-a-copy-link-control-somewhere-appropriate-e-g-welcome-or-results-that-copies-the-current-page-url-to-the-clipboard-and-shows-a-cute-confirmation-micro-interaction-toast-callout",
+      "title": "Provide a shareable link experience with no login required: include a “Copy Link” control somewhere appropriate (e.g., welcome or results) that copies the current page URL to the clipboard and shows a cute confirmation micro-interaction (toast/callout).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-required-static-assets-rendering-include-the-generated-meme-images-as-static-files-under-frontend-public-assets-generated-and-render-them-in-the-perfect-score-and-non-perfect-result-screens-respectively",
+      "title": "Add required static assets rendering: include the generated meme images as static files under frontend/public/assets/generated and render them in the perfect-score and non-perfect result screens respectively.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-quiz-content-for-q1-the-first-question-so-that-the-question-when-is-our-anniversary-don-t-check-my-status-oops-has-exactly-these-options-in-this-order-a-14th-feb-2021-b-25th-nov-2021-c-26th-nov-2021-d-you-were-born-knowing-me-and-set-the-correct-answer-to-25th-nov-2021",
+      "title": "Update the quiz content for Q1 (the first question) so that the question \"When is our anniversary (don't check my status oops)?\" has exactly these options in this order: A) \"14th Feb 2021\", B) \"25th Nov 2021\", C) \"26th Nov 2021\", D) \"You were born knowing me\"; and set the correct answer to \"25th Nov 2021\".",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Build a 5-question MCQ love quiz web app with welcome screen, per-question card UI, progress indicator, and animated answer feedback",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement quiz content and scoring logic with specific questions/options/correct answers, including special sparkle animation when selecting “Everything” on Q4",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Create results screens: perfect score (5/5) win screen with date coupon and “Redeem My Date 💌” interaction; non-perfect score teasing screen with Valentine prompt",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Implement Valentine trick interaction: repeated “No” clicks shrink No/grow Yes and change prompt text until Yes dominates; clicking Yes triggers final celebration screen with confetti/hearts",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Design romantic UI/UX: soft pastel gradients, floating hearts background, rounded cards, subtle animations/transitions, playful micro-interactions, mobile-first responsive, fast/no login",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Optional audio: gentle background music and subtle sound effects with user-friendly controls",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Provide a shareable link (no login required) for easy sharing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Update Q1 quiz content: set question to “When is our anniversary (don't check my status oops)?” with options A) 14th Feb 2021, B) 25th Nov 2021 (correct), C) 26th Nov 2021, D) You were born knowing me",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Romantic 5-question love quiz with animated results and Valentine 'Yes/No' trick",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

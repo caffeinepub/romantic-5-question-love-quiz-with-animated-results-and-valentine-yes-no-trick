@@ -1,0 +1,23 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Update Q1 quiz options and correct answer",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "summary": "Update Q1 answer option texts/order and set the correct answer date to 25th Nov 2021 in the existing frontend quiz content data source.",
+      "acceptanceCriteria": [
+        "In frontend/src/data/quizContent.ts, Q1 options are exactly: ['14th Feb 2021','25th Nov 2021','26th Nov 2021','You were born knowing me'] in that order.",
+        "In frontend/src/data/quizContent.ts, Q1 correctAnswer is exactly '25th Nov 2021'.",
+        "When running the app, Q1 renders these updated option texts, and selecting '25th Nov 2021' is evaluated as correct (triggers the correct-answer feedback), while the other three options are evaluated as incorrect."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/quizContent.ts",
+          "operation": "modify",
+          "description": "Update the first quiz question object (Q1) to set options (in order) to '14th Feb 2021', '25th Nov 2021', '26th Nov 2021', 'You were born knowing me', and set correctAnswer to '25th Nov 2021'. Ensure the Q1 question text remains unchanged and no other questions/options are modified."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1rem;
+        
+        /* Romantic Valentine Palette - Light Mode */
+        --background: 0.98 0.015 15;
+        --foreground: 0.25 0.02 15;
+        --card: 1 0.01 15;
+        --card-foreground: 0.25 0.02 15;
+        --popover: 1 0.01 15;
+        --popover-foreground: 0.25 0.02 15;
+        --primary: 0.65 0.18 15;
+        --primary-foreground: 1 0.01 15;
+        --secondary: 0.95 0.02 15;
+        --secondary-foreground: 0.25 0.02 15;
+        --muted: 0.95 0.015 15;
+        --muted-foreground: 0.55 0.02 15;
+        --accent: 0.92 0.025 15;
+        --accent-foreground: 0.25 0.02 15;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.90 0.015 15;
+        --input: 0.90 0.015 15;
+        --ring: 0.65 0.18 15;
+        
+        /* Custom romantic colors */
+        --romantic-pink: 0.75 0.15 350;
+        --romantic-rose: 0.65 0.18 15;
+        --romantic-blush: 0.85 0.08 25;
+        --romantic-beige: 0.88 0.03 45;
+    }
+
+    .dark {
+        --background: 0.20 0.02 15;
+        --foreground: 0.95 0.01 15;
+        --card: 0.25 0.02 15;
+        --card-foreground: 0.95 0.01 15;
+        --popover: 0.25 0.02 15;
+        --popover-foreground: 0.95 0.01 15;
+        --primary: 0.75 0.15 350;
+        --primary-foreground: 0.20 0.02 15;
+        --secondary: 0.30 0.02 15;
+        --secondary-foreground: 0.95 0.01 15;
+        --muted: 0.30 0.02 15;
+        --muted-foreground: 0.65 0.02 15;
+        --accent: 0.35 0.03 15;
+        --accent-foreground: 0.95 0.01 15;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.20 0.02 15;
+        --border: 0.35 0.02 15;
+        --input: 0.35 0.02 15;
+        --ring: 0.75 0.15 350;
+        
+        --romantic-pink: 0.75 0.15 350;
+        --romantic-rose: 0.65 0.18 15;
+        --romantic-blush: 0.85 0.08 25;
+        --romantic-beige: 0.88 0.03 45;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    }
+}
+
+@layer utilities {
+    .romantic-gradient {
+        background: linear-gradient(135deg, oklch(var(--romantic-pink)) 0%, oklch(var(--romantic-rose)) 100%);
+    }
+    
+    .romantic-gradient-soft {
+        background: linear-gradient(135deg, oklch(var(--romantic-blush)) 0%, oklch(var(--romantic-beige)) 100%);
+    }
+}
+
+@layer components {
+    .text-romantic-pink {
+        color: oklch(var(--romantic-pink));
+    }
+    
+    .text-romantic-rose {
+        color: oklch(var(--romantic-rose));
+    }
+    
+    .bg-romantic-pink {
+        background-color: oklch(var(--romantic-pink));
+    }
+    
+    .border-romantic-pink {
+        border-color: oklch(var(--romantic-pink));
+    }
+    
+    .fill-romantic-pink {
+        fill: oklch(var(--romantic-pink));
+    }
+}
+
+/* Custom Animations */
+@keyframes float-up {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes confetti {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--vx), var(--vy)) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse-slow {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounce-slow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float-up {
+    animation: float-up linear infinite;
+}
+
+.animate-confetti {
+    animation: confetti 2s ease-out forwards;
+}
+
+.animate-sparkle {
+    animation: sparkle 1s ease-out forwards;
+}
+
+.animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 2s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-quiz-content-for-q1-the-first-question-so-that-the-question-when-is-our-anniversary-don-t-check-my-status-oops-has-exactly-these-options-in-this-order-a-14th-feb-2021-b-25th-nov-2021-c-26th-nov-2021-d-you-were-born-knowing-me-and-set-the-correct-answer-to-25th-nov-2021",
+      "featureTitle": "Update the quiz content for Q1 (the first question) so that the question \"When is our anniversary (don't check my status oops)?\" has exactly these options in this order: A) \"14th Feb 2021\", B) \"25th Nov 2021\", C) \"26th Nov 2021\", D) \"You were born knowing me\"; and set the correct answer to \"25th Nov 2021\".",
+      "files": [
+        "frontend/src/data/quizContent.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

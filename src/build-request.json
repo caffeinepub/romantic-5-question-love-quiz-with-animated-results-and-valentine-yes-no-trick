@@ -1,0 +1,37 @@
+{
+  "kind": "build_request",
+  "title": "Update Q1 answer options and correct answer date",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "text": "Update the quiz content for Q1 (the first question) so that the question \"When is our anniversary (don't check my status oops)?\" has exactly these options in this order: A) \"14th Feb 2021\", B) \"25th Nov 2021\", C) \"26th Nov 2021\", D) \"You were born knowing me\"; and set the correct answer to \"25th Nov 2021\".",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Could you please change the answers for Q1\n\nQ1. When is our anniversary (don't check my status oops)?\n\nOptions:\n\nA. 14th Feb 2021\n\nB. 25th Nov 2021 ✅\n\nC. 26th Nov 2021\n\nD. You were born knowing me"
+        ]
+      },
+      "acceptanceCriteria": [
+        "In frontend/src/data/quizContent.ts, Q1 options are exactly: ['14th Feb 2021','25th Nov 2021','26th Nov 2021','You were born knowing me'] in that order.",
+        "In frontend/src/data/quizContent.ts, Q1 correctAnswer is exactly '25th Nov 2021'.",
+        "When running the app, Q1 renders these updated option texts, and selecting '25th Nov 2021' is evaluated as correct (triggers the correct-answer feedback), while the other three options are evaluated as incorrect."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit any files under frontend/src/components/ui (read-only Shadcn components).",
+    "Do not change the backend; keep all quiz content managed in the existing frontend data source."
+  ],
+  "nonGoals": [
+    "Do not change the wording of the Q1 question text.",
+    "Do not change any other questions, options, scoring rules, animations, or result screens."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
